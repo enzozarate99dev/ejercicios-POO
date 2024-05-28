@@ -1,11 +1,11 @@
 from AudioLibro import Audiolibro
 from Libro import Libro
+from Publicacion import Publicacion
 from claseLista import ListaPublicaciones
 
 if __name__ == '__main__':
     li = ListaPublicaciones()
     li.cargarPublicaciones()
-    
     band = True
     while band:
         print ("[1] Agregar una publicacion.")

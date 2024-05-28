@@ -1,4 +1,6 @@
-class Publicacion:
+import abc 
+from abc import ABC
+class Publicacion(ABC):
     __titulo: str
     __categoria: str
     __precioBase: float
@@ -14,5 +16,6 @@ class Publicacion:
         return self.__categoria
     def getPrecioBase(self):
         return self.__precioBase
+    @abc.abstractmethod
     def getImporteVenta(self):
         pass
