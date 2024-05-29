@@ -3,12 +3,13 @@ from Casa import Casa
 from Departamento import Departamento
 from claseLista import Lista
 import unittest
+import test_inmuebles
 
-def run_tests():
-    loader = unittest.TestLoader()
-    suite = loader.discover('.', pattern='claseTest.py')
-    runner = unittest.TextTestRunner()
-    runner.run(suite)
+# def run_tests():
+#     loader = unittest.TestLoader()
+#     suite = loader.discover('.', pattern='claseTest.py')
+#     runner = unittest.TextTestRunner()
+#     runner.run(suite)
 
 if __name__ == '__main__':
     li = Lista()
@@ -54,7 +55,7 @@ if __name__ == '__main__':
                         li.agregarAlFinal(inmu)
             except ValueError:
                 print("Error. se esparaba un nro")
-                
+
         elif op == 3:
             cant = int(input("Ingrese una cantidad de hab: ")) 
             li.informeDeptos(cant)
@@ -62,7 +63,8 @@ if __name__ == '__main__':
         elif op == 4:
             li.informeCasas()
         elif op == 5:
-            run_tests()
+            print("Ejecutando pruebas")
+            unittest.TextTestRunner().run(unittest.TestLoader().loadTestsFromModule(test_inmuebles))           
         else:
             print("SALIENDO")
             band = False
