@@ -73,8 +73,7 @@ class Lista:
         self.__actual = self.__comienzo
         # Incrementa el contador de nodos en la lista.
         self.__tope += 1
-        # Mensaje de confirmación.
-        print("Agregado exitosamente!\n")
+        print("Agregado\n")
     def informeDeptos(self, xcant):
         band=False
         for inmu in self:

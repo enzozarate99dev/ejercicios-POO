@@ -31,8 +31,9 @@ if __name__ == '__main__':
         elif op == 2:
             try:
                 tipo = int(input("Ingrese el tipo de inmueble ([1]Depto - [2]Casa - [0]Cancelar): "))
-                if tipo not in [0, 1, 2]:
-                    raise ValueError("Tipo invalido")
+                while tipo not in [0, 1, 2]:
+                    print("Tipo invalido, intente nuevamente")
+                    tipo = int(input("Ingrese el tipo de inmueble ([1]Depto - [2]Casa - [0]Cancelar): "))
                 if tipo == 0:
                     print("Cancelado")
                     continue
@@ -52,9 +53,8 @@ if __name__ == '__main__':
                         inmu = Casa(loc, dir, sup, supT)
                         li.agregarAlFinal(inmu)
             except ValueError:
-                print("Tipo invalido")
-                continue
-
+                print("Error. se esparaba un nro")
+                
         elif op == 3:
             cant = int(input("Ingrese una cantidad de hab: ")) 
             li.informeDeptos(cant)

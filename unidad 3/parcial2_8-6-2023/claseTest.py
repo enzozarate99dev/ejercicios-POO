@@ -11,7 +11,7 @@ class TestInmuebles(unittest.TestCase):
         precioConstCasa = 300*1.8*20000
 
         impEsperadoDepto = 100 * 15 * precioConstDepto
-        impEsperadoCasa = 200 * 15 * precioConstCasa
+        impEsperadoCasa = 200 * 15 * precioConstCasa 
         
         self.assertEqual(depto.getImporteVenta(), impEsperadoDepto)
         self.assertEqual(casa.getImporteVenta(), impEsperadoCasa)
